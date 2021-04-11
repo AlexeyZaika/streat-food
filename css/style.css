@@ -1,0 +1,385 @@
+@font-face {
+  font-family: "ArciformSans";
+  font-display: swap;
+  src: url("../fonts/ArciformSans.woff") format("woff"), url("../fonts/ArciformSans.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PickleJuice";
+  font-display: swap;
+  src: url("../fonts/PickleJuice.woff") format("woff"), url("../fonts/PickleJuice.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+aside,
+nav,
+footer,
+header,
+section {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  min-width: 320px;
+}
+
+body {
+  line-height: 1;
+  font-family: "ArciformSans", sans-serif;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: "ArciformSans", sans-serif;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+body {
+  color: #000;
+  font-size: 14px;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.wrapper::after,
+.wrapper::before {
+  content: '';
+  position: fixed;
+  z-index: 10;
+  height: 20px;
+  width: 100%;
+  left: 0;
+}
+
+.wrapper::after {
+  bottom: 0;
+  background: #fff url("../img/border-bottom.svg") center 4px repeat-x;
+  background-size: auto 20px;
+}
+
+.wrapper::before {
+  top: 0;
+  background: #fff url("../img/border-top.svg") center -3px repeat-x;
+  background-size: auto 20px;
+}
+
+.main {
+  position: relative;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 35px 25px 20px;
+}
+
+.main::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 60px;
+  height: 110px;
+  top: 120px;
+  left: -25px;
+  background: url("../img/food.svg") center/100% no-repeat;
+}
+
+.main::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 33px;
+  height: 80px;
+  top: 45px;
+  right: 10px;
+  background: url("../img/coffee01.svg") center/100% no-repeat;
+}
+
+.main__logo {
+  margin: 0 auto 15px;
+  width: 170px;
+}
+
+.main__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main__footer img {
+  display: inline-block;
+}
+
+.main__footer img:nth-child(1) {
+  margin-left: -10px;
+  width: 95px;
+}
+
+.main__footer img:nth-child(2) {
+  margin-right: -55px;
+  width: 140px;
+}
+
+.menu__block {
+  padding-bottom: 10px;
+}
+
+.menu__block_world .menu__title {
+  color: #EB9508;
+}
+
+.menu__block_world .menu__title span {
+  background-color: #EB9508;
+}
+
+.menu__block_world .item-menu__cost {
+  color: #EB9508;
+}
+
+.menu__block_rolls .menu__title {
+  color: #FA4D24;
+}
+
+.menu__block_rolls .menu__title::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 62px;
+  height: 52px;
+  top: -5px;
+  right: -50px;
+  background: url("../img/sushi-rolls01.svg") center/100% no-repeat;
+}
+
+.menu__block_rolls .item-menu__cost {
+  color: #FA4D24;
+}
+
+.menu__block_sushi .menu__title {
+  color: #3BB34B;
+}
+
+.menu__block_sushi .menu__title::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 47px;
+  height: 43px;
+  top: -5px;
+  left: -23px;
+  background: url("../img/coffee02.svg") center/100% no-repeat;
+}
+
+.menu__block_sushi .menu__title span {
+  background-color: #3BB34B;
+}
+
+.menu__block_sushi .item-menu__cost {
+  color: #3BB34B;
+}
+
+.menu__block_hosomaki::before,
+.menu__block_hosomaki::after {
+  content: '';
+  display: block;
+  width: 200px;
+  height: 19px;
+  margin: 0 auto 10px;
+  background: url("../img/border-block.svg") center/100% no-repeat;
+}
+
+.menu__block_hosomaki::after {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.menu__block_hosomaki .menu__title::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 43px;
+  height: 65px;
+  top: -10px;
+  left: -40px;
+  background: url("../img/sheet.svg") center/100% no-repeat;
+}
+
+.menu__block_nigiri .menu__title {
+  color: #270A7C;
+}
+
+.menu__block_nigiri .menu__title::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 50px;
+  height: 45px;
+  top: -5px;
+  left: -20px;
+  background: url("../img/coffee03.svg") center/100% no-repeat;
+}
+
+.menu__block_nigiri .menu__title::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 74px;
+  height: 51px;
+  top: -5px;
+  right: -30px;
+  background: url("../img/coffee04.svg") center/100% no-repeat;
+}
+
+.menu__block_nigiri .item-menu__cost {
+  color: #270A7C;
+}
+
+.menu__block_sashimi .menu__title::after {
+  width: 15px;
+  height: 17px;
+  top: -5px;
+  right: 25px;
+  background: url("../img/coffee05.svg") center/100% no-repeat;
+}
+
+.menu__title {
+  position: relative;
+  margin-bottom: 17px;
+  font-size: 42px;
+  font-family: 'PickleJuice', sans-serif;
+  text-align: center;
+}
+
+.menu__title span {
+  display: inline-block;
+  padding: 9px 9px 0;
+  color: #fff;
+}
+
+.menu__subtitle {
+  margin-top: -15px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.item-menu {
+  margin-bottom: 12px;
+}
+
+.item-menu_specification {
+  font-size: 9px;
+  color: #666;
+}
+
+.item-menu__top {
+  margin-bottom: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.item-menu__name {
+  font-size: 16px;
+}
+
+.item-menu__delimiter {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  margin: 0 5px 0;
+  height: 12px;
+  background: url("../img/dotted-line.svg") left center/cover no-repeat;
+  -webkit-transform: translateY(3px);
+      -ms-transform: translateY(3px);
+          transform: translateY(3px);
+}
+
+.item-menu__cost {
+  font-size: 21px;
+  text-transform: uppercase;
+}
+
+.item-menu__cost span {
+  font-size: 12px;
+}
