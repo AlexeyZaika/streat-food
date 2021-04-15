@@ -139,11 +139,46 @@ body {
   background-size: auto 20px;
 }
 
+.wrapper_drink {
+  background: url("../img/drink/main-bg.png") center/cover no-repeat;
+}
+
+.wrapper_drink::after {
+  background: #28272a url("../img/drink/border-bottom-white.svg") center 4px repeat-x;
+}
+
+.wrapper_drink::before {
+  background: #28272a url("../img/drink/border-top-yellow.svg") center -3px repeat-x;
+}
+
+.wrapper_drink .item-menu_specification {
+  color: #fff;
+}
+
+.wrapper_drink .item-menu__name {
+  color: #fff;
+}
+
+.wrapper_drink .main__footer {
+  margin-bottom: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .main {
   position: relative;
-  max-width: 480px;
+  max-width: 600px;
+  min-height: 100vh;
   margin: 0 auto;
   padding: 35px 25px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .main::before {
@@ -168,6 +203,56 @@ body {
   background: url("../img/coffee01.svg") center/100% no-repeat;
 }
 
+.main_drink {
+  background: url("../img/drink/menu-bg.png") center top/contain;
+}
+
+.main_drink::before,
+.main_drink::after {
+  display: none;
+}
+
+.main__block {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main__button {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 15px 20px 5px;
+  font-size: 42px;
+  font-family: 'PickleJuice', sans-serif;
+  color: #fff;
+  background-color: #FA4D24;
+  border-radius: 5px;
+}
+
+.main__button_drink {
+  background-color: #270A7C;
+}
+
+.main__button_back {
+  margin-top: 0;
+  padding: 10px 30px 2px;
+  font-size: 28px;
+}
+
 .main__logo {
   margin: 0 auto 15px;
   width: 170px;
@@ -180,19 +265,15 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .main__footer img {
+  position: relative;
   display: inline-block;
-}
-
-.main__footer img:nth-child(1) {
-  margin-left: -10px;
-  width: 95px;
-}
-
-.main__footer img:nth-child(2) {
-  margin-right: -55px;
+  left: 55px;
   width: 140px;
 }
 
@@ -319,6 +400,85 @@ body {
   background: url("../img/coffee05.svg") center/100% no-repeat;
 }
 
+.menu__block_gin .menu__title {
+  color: #FFEC02;
+}
+
+.menu__block_gin .item-menu__cost {
+  color: #FFEC02;
+}
+
+.menu__block_brunch .menu__title {
+  color: #FA3880;
+}
+
+.menu__block_brunch .menu__title span {
+  background-color: #FA3880;
+}
+
+.menu__block_brunch .item-menu__cost {
+  color: #FA3880;
+}
+
+.menu__block_lemon img:nth-of-type(1) {
+  display: none;
+}
+
+.menu__block_lemon img:nth-of-type(2) {
+  display: none;
+}
+
+.menu__block_lemon img:nth-of-type(3) {
+  display: block;
+  margin: 0 auto 20px;
+  width: 80%;
+}
+
+.menu__block_cockt {
+  margin-bottom: 20px;
+  padding: 5px;
+  background-color: #fff;
+}
+
+.menu__block_cockt .item-menu_specification {
+  color: #000;
+}
+
+.menu__block_cockt .item-menu__name {
+  color: #000;
+}
+
+.menu__block_beers .image {
+  display: block;
+  margin: 15px auto;
+  width: 70%;
+}
+
+.menu__block_beers .image_rot {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.menu__block_wine .menu__title {
+  color: #FA3880;
+}
+
+.menu__block_wine .menu__subtitle {
+  font-size: 24px;
+  font-family: 'PickleJuice', sans-serif;
+  color: #EB9508;
+}
+
+.menu__block_wine .item-menu__cost {
+  color: #FA3880;
+}
+
+.menu_wrapper {
+  padding: 10px;
+  border: 3px dashed #000;
+}
+
 .menu__title {
   position: relative;
   margin-bottom: 17px;
@@ -338,6 +498,18 @@ body {
   margin-bottom: 12px;
   font-size: 16px;
   text-align: center;
+}
+
+.menu__row_gin img {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.menu__column img {
+  display: block;
+  margin: 0 auto 20px auto;
+  width: 70%;
 }
 
 .item-menu {
@@ -378,8 +550,105 @@ body {
 .item-menu__cost {
   font-size: 21px;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .item-menu__cost span {
   font-size: 12px;
+}
+
+@media (min-width: 550px) {
+  .menu__block_lemon img:nth-of-type(1) {
+    display: block;
+    width: 50px;
+    margin-bottom: -20px;
+  }
+
+  .menu__block_lemon img:nth-of-type(2) {
+    display: block;
+    margin: 0 0 20px 150px;
+    width: 40px;
+  }
+
+  .menu__block_lemon img:nth-of-type(3) {
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .menu__row_gin {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .menu__row_gin .menu__block {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 48%;
+            flex: 0 0 48%;
+  }
+
+  .menu__row_gin img {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 48%;
+            flex: 0 0 48%;
+    width: 48%;
+    margin-right: 4%;
+  }
+
+  .menu__row_brunch {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .menu__row_brunch .menu__block {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 48%;
+            flex: 0 0 48%;
+  }
+
+  .menu__row_lemon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .menu__row_lemon .menu__block {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 48%;
+            flex: 0 0 48%;
+  }
+
+  .menu__row_wine {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .menu__column {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 48%;
+            flex: 0 0 48%;
+  }
 }
