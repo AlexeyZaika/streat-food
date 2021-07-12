@@ -212,6 +212,25 @@ body {
   display: none;
 }
 
+.main_summer {
+  background: url("../img/summer/bg.svg") top center/300px;
+}
+
+.main_summer .main__logo {
+  margin: 30px auto 50px;
+  width: 135px;
+}
+
+.main_summer::after {
+  display: none;
+}
+
+.main_summer::before {
+  width: 50px;
+  left: 15px;
+  background: url("../img/summer/lime.svg") center/100% no-repeat;
+}
+
 .main__block {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
@@ -234,10 +253,12 @@ body {
 
 .main__button {
   display: inline-block;
+  min-width: 260px;
   margin-top: 25px;
   padding: 15px 20px 5px;
   font-size: 42px;
   font-family: 'PickleJuice', sans-serif;
+  text-align: center;
   color: #fff;
   background-color: #FA4D24;
   border-radius: 5px;
@@ -251,6 +272,10 @@ body {
   margin-top: 0;
   padding: 10px 30px 2px;
   font-size: 28px;
+}
+
+.main__button_summer {
+  background-color: #FA3880;
 }
 
 .main__logo {
@@ -275,6 +300,19 @@ body {
   display: inline-block;
   left: 55px;
   width: 140px;
+}
+
+.main__footer_summer {
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.main__footer_summer img {
+  position: absolute;
+  width: 230px;
+  height: 100px;
+  left: calc(50% - 115px);
+  bottom: -120px;
 }
 
 .menu__block {
@@ -472,6 +510,48 @@ body {
 
 .menu__block_wine .item-menu__cost {
   color: #FA3880;
+}
+
+.menu__block_summer {
+  position: relative;
+  margin-bottom: 80px;
+}
+
+.menu__block_summer::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  bottom: -50px;
+  left: 0;
+  background: url("../img/summer/lemon.svg") center/100% no-repeat;
+}
+
+.menu__block_summer::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 50px;
+  bottom: -20px;
+  right: -15px;
+  background: url("../img/summer/strawbery.svg") center/100% no-repeat;
+}
+
+.menu__block_summer .menu__title {
+  margin-bottom: 50px;
+  color: #FA3880;
+}
+
+.menu__block_summer .menu__title span {
+  background-color: #FA3880;
+}
+
+.menu__block_summer .item-menu {
+  margin-bottom: 30px;
+}
+
+.menu__block_summer .item-menu__cost {
+  color: #FA4D24;
 }
 
 .menu_wrapper {
